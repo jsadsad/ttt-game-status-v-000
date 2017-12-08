@@ -6,6 +6,7 @@ end
 def won?(board)
   WIN_COMBINATIONS.detect do |token|
     board[token[0]] == "X" && board[token[1]] == "X" && board[token[2]] == "X" && position_taken?(board, token[0] == "X")
+  end
 end
 
 # Define your WIN_COMBINATIONS constant
