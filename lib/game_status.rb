@@ -4,17 +4,8 @@ def position_taken?(board, index)
 end
 
 def won?(board)
-  win_index_1 = WIN_COMBINATIONS[0]
-  win_index_2 = WIN_COMBINATIONS[1]
-  win_index_3 = WIN_COMBINATIONS[2]
-  win_index_4 = WIN_COMBINATIONS[3]
-  win_index_5 = WIN_COMBINATIONS[4]
-  win_index_6 = WIN_COMBINATIONS[5]
-  win_index_7 = WIN_COMBINATIONS[6]
-  win_index_8 = WIN_COMBINATIONS[7]
-
-
-
+  WIN_COMBINATIONS.detect do |token|
+    board[token[0]] == "X" && board[token[1]] == "X" && board[token[2]] == "X" && position_taken?(board, token[0] == "X")
 end
 
 # Define your WIN_COMBINATIONS constant
