@@ -25,6 +25,7 @@ end
 
 def winner(board)
   if winning_player = won?(board)
+    board[winning_player.first]
 end
 
 
